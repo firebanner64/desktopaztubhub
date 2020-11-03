@@ -134,7 +134,13 @@ class TextFieldActions():
         self.text_field.set_text('')
     
     def copy_text(self):
-        copy(self.text_field.get_text())
+        
+        current_text = self.text_field.get_text()
+
+        if len(current_text) == 0:
+            return
+        else:
+            copy(self.text_field.get_text())
         
 
 
